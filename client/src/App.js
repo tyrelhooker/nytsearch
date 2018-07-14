@@ -69,7 +69,7 @@ class App extends Component {
                 <p className="card-text">Results go Here</p>
                 <ul className="list-group">
                   {this.state.results.map(result => {
-                    <li className="list-group-item">{result._id}
+                    return <li key={result._id} className="list-group-item">{result._id}
                       <button type="submit" className="btn btn-success float-right" id="save-art">Save</button>
                     </li>
                   })}

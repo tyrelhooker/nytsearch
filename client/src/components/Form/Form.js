@@ -3,7 +3,7 @@ import React from "react";
 const Form = props => (
   <form onSubmit={props.handleFormSubmit}>
     <div className="form-group">
-      <label for="search">Search Term:</label>
+      <label>Search Term:</label>
       <input 
         type="text" 
         className="form-control" 
@@ -13,7 +13,7 @@ const Form = props => (
       />
     </div>
     <div className="form-group">
-      <label for="start-year">Start Year:</label>
+      <label>Start Year:</label>
       <input 
         type="text" 
         className="form-control" 
@@ -23,7 +23,7 @@ const Form = props => (
       />
     </div>
     <div className="form-group">
-      <label for="end-year">End Year:</label>
+      <label>End Year:</label>
       <input 
         type="text" 
         className="form-control" 
