@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Jumbotron from "./components/Jumbotron";
 import Form from "./components/Form";
+import Results from "./components/Results";
 import API from "./utils/Api";
 import './App.css';
 
@@ -47,6 +48,7 @@ class App extends Component {
         <Jumbotron>
           <h1>New York Times Article Scrubber</h1>
         </Jumbotron>
+
         <div className="row">
           <div className="col-12">
 
@@ -66,14 +68,13 @@ class App extends Component {
             <div className="card">
               <h5 className="card-header">Results</h5>
               <div className="card-body">
-                <p className="card-text">Results go Here</p>
-                <ul className="list-group">
-                  {this.state.results.map(result => {
-                    return <li key={result._id} className="list-group-item">{result._id}
-                      <button type="submit" className="btn btn-success float-right" id="save-art">Save</button>
-                    </li>
-                  })}
-                </ul>
+                {this.state.results.map(result => (
+                  <Results 
+                    key={result._id}
+                    id={result._id}
+                    headline={result.headline.main}
+                  />
+                ))}
               </div>
             </div>
 
